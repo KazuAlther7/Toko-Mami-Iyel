@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toko Mami Iyel</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header>
+  <h1>🏪 Toko Mami Iyel</h1>
+  <button id="cart-btn" class="cart-btn">🛒 <span id="cart-count">0</span></button>
+</header>
+
+<main>
+  <section id="catalog-view">
+    <div id="categories" class="categories"></div>
+    <div id="products" class="products"></div>
+  </section>
+
+  <section id="cart-view" hidden>
+    <h2>Keranjang</h2>
+    <div id="cart-items"></div>
+    <p class="total">Total: <b id="cart-total">Rp0</b></p>
+    <button id="checkout-btn" class="primary">Lanjut Checkout</button>
+    <button id="back-catalog-btn" class="secondary">Kembali Belanja</button>
+  </section>
+
+  <section id="checkout-view" hidden>
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <input required name="name" placeholder="Nama" />
+      <input required name="phone" placeholder="No. HP" type="tel" />
+      <div class="fulfillment">
+        <label><input type="radio" name="fulfillment" value="pickup" checked> Ambil di Toko</label>
+        <label><input type="radio" name="fulfillment" value="delivery"> Diantar</label>
+      </div>
+      <textarea name="address" placeholder="Alamat (untuk delivery)" hidden></textarea>
+      <textarea name="notes" placeholder="Catatan (opsional)"></textarea>
+      <p class="total">Total sementara: <b id="checkout-total">Rp0</b></p>
+      <p class="note">Biaya pengantaran dikonfirmasi via WhatsApp.</p>
+      <button type="submit" class="primary" id="submit-btn">Pesan via WhatsApp</button>
+      <button type="button" id="back-cart-btn" class="secondary">Kembali</button>
+    </form>
+  </section>
+
+  <section id="success-view" hidden>
+    <h2>✅ Pesanan Dibuat!</h2>
+    <p>No. Pesanan: <b id="success-order-number"></b></p>
+    <p>Total: <b id="success-total"></b></p>
+    <p class="note">Jangan lupa tekan <b>Kirim</b> di WhatsApp. Admin akan mengonfirmasi pesanan.</p>
+    <button id="success-back" class="primary">Kembali ke Katalog</button>
+  </section>
+</main>
+
+<footer><a href="admin.html">Admin</a></footer>
+
+<script src="app.js"></script>
+</body>
+</html>

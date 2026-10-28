@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Toko Mami Iyel</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header>
+  <h1>🔐 Admin</h1>
+  <a href="index.html" style="color:white;text-decoration:none;font-size:.9rem">← Toko</a>
+</header>
+<main>
+  <section id="login-view">
+    <h2>Login Admin</h2>
+    <form id="login-form">
+      <input required type="email" name="email" placeholder="Email" />
+      <input required type="password" name="password" placeholder="Password" />
+      <button type="submit" class="primary" id="login-btn">Masuk</button>
+    </form>
+  </section>
+
+  <section id="orders-view" hidden>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <h2 style="margin:0">Pesanan</h2>
+      <button id="logout-btn" class="secondary" style="width:auto;padding:6px 12px;margin:0">Logout</button>
+    </div>
+    <button id="refresh-btn" class="secondary" style="margin-bottom:12px">🔄 Muat Ulang</button>
+    <div id="orders"></div>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

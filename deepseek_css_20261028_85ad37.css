@@ -1,0 +1,36 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; background: #f5f5f5; color: #222; padding-bottom: 40px; }
+header { background: #16a34a; color: white; padding: 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+header h1 { font-size: 1.1rem; }
+.cart-btn { background: rgba(255,255,255,.2); border: none; color: white; padding: 8px 12px; border-radius: 6px; font-size: 1rem; cursor: pointer; }
+main { max-width: 720px; margin: 0 auto; padding: 12px; }
+.categories { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
+.categories button { padding: 6px 12px; border: 1px solid #ddd; background: white; border-radius: 20px; white-space: nowrap; font-size: .9rem; }
+.categories button.active { background: #16a34a; color: white; border-color: #16a34a; }
+.products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+.product { background: white; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; }
+.product h3 { font-size: .95rem; margin-bottom: 4px; }
+.product .price { color: #16a34a; font-weight: 600; font-size: .9rem; }
+.product .stock { font-size: .75rem; color: #666; margin: 4px 0; }
+.product button { background: #16a34a; color: white; border: none; padding: 8px; border-radius: 6px; font-size: .9rem; margin-top: auto; }
+.product button:disabled { background: #ccc; }
+h2 { margin: 12px 0; font-size: 1.2rem; }
+.cart-item { background: white; padding: 10px; border-radius: 8px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.cart-item .name { flex: 1; font-size: .9rem; }
+.cart-item input { width: 50px; padding: 4px; border: 1px solid #ddd; border-radius: 4px; text-align: center; }
+.cart-item .subtotal { font-size: .85rem; min-width: 80px; text-align: right; }
+.cart-item .del { background: none; border: none; color: #dc2626; font-size: 1.2rem; }
+.total { background: white; padding: 12px; border-radius: 8px; margin: 12px 0; display: flex; justify-content: space-between; }
+.primary, .secondary { display: block; width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; margin-top: 8px; }
+.primary { background: #16a34a; color: white; }
+.primary:disabled { background: #999; }
+.secondary { background: white; color: #222; border: 1px solid #ddd; }
+form { display: flex; flex-direction: column; gap: 10px; }
+form input, form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; font-family: inherit; }
+form textarea { min-height: 60px; }
+.fulfillment { display: flex; gap: 8px; }
+.fulfillment label { flex: 1; padding: 12px; background: white; border: 1px solid #ddd; border-radius: 8px; text-align: center; }
+.fulfillment input { width: auto; margin-right: 4px; }
+.note { font-size: .85rem; color: #666; }
+footer { text-align: center; padding: 24px; }
+footer a { color: #16a34a; text-decoration: none; font-size: .9rem; }
